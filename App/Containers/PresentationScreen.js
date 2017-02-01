@@ -16,18 +16,17 @@ export default class PresentationScreen extends React.Component {
         <Image source={Images.background} style={styles.backgroundImage} resizeMode='stretch' />
         <ScrollView style={styles.container}>
           <View style={styles.centered}>
-            <Image source={Images.clearLogo} style={styles.logo} />
+            <Image source={Images.novo} style={styles.logo} />
           </View>
 
           <View style={styles.section} >
             <Text style={styles.sectionText} >
-              Default screens for development, debugging, and alpha testing
-              are available below.
+              cre8
             </Text>
           </View>
 
           <RoundedButton onPress={NavigationActions.componentExamples}>
-            Component Examples Screen
+            Component Examples Screen 888
           </RoundedButton>
 
           <RoundedButton onPress={NavigationActions.usageExamples}>

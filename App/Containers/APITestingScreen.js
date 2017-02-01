@@ -14,8 +14,8 @@ import styles from './Styles/APITestingScreenStyle'
 
 // API buttons here:
 const endpoints = [
-  { label: 'Get City (Boise)', endpoint: 'getCity', args: ['Boise'] },
-  { label: 'Get City (Toronto)', endpoint: 'getCity', args: ['Toronto'] }
+  { label: 'GET BILLS', endpoint: 'getCity', args: ['Boise'] },
+  { label: 'GET TEST', endpoint: 'getCity', args: ['Toronto'] }
 ]
 
 export default class APITestingScreen extends React.Component {

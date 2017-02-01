@@ -2,7 +2,7 @@
 import apisauce from 'apisauce'
 
 // our "constructor"
-const create = (baseURL = 'http://api.openweathermap.org/data/2.5/') => {
+const create = (baseURL = 'https://www.voetr.com/api/bill') => {
   // ------
   // STEP 1
   // ------
