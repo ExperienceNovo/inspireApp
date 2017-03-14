@@ -10,6 +10,7 @@ import AlertMessage from '../Components/AlertMessage'
 // Styles
 import styles from './Styles/ListviewExampleStyle'
 
+
 class ListviewExample extends React.Component {
   state: {
     dataSource: Object

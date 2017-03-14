@@ -2,7 +2,7 @@
 import apisauce from 'apisauce'
 
 // our "constructor"
-const create = (baseURL = 'https://www.voetr.com/api/bill') => {
+const create = (baseURL = 'https://www.voetr.com') => {
   // ------
   // STEP 1
   // ------
@@ -13,17 +13,17 @@ const create = (baseURL = 'https://www.voetr.com/api/bill') => {
     // base URL is read from the "constructor"
     baseURL,
     // here are some default headers
-    headers: {
-      'Cache-Control': 'no-cache'
-    },
+    //headers: {
+    //  'Cache-Control': 'no-cache'
+    //},
     // 10 second timeout...
     timeout: 10000
   })
 
   // Force OpenWeather API Key on all requests
-  api.addRequestTransform((request) => {
-    request.params['APPID'] = '0e44183e8d1018fc92eb3307d885379c'
-  })
+  //api.addRequestTransform((request) => {
+  //  request.params['APPID'] = '0e44183e8d1018fc92eb3307d885379c'
+  //})
 
   // Wrap api's addMonitor to allow the calling code to attach
   // additional monitors in the future.  But only in __DEV__ and only
@@ -46,7 +46,9 @@ const create = (baseURL = 'https://www.voetr.com/api/bill') => {
   // Since we can't hide from that, we embrace it by getting out of the
   // way at this level.
   //
-  const getCity = (city) => api.get('weather', {q: city})
+  const getBills = (bills) => api.get('api/bill', {limit:10, skip:0})
+  const getCommittees = (committees) => api.get('api/committee', {limit:10, skip:0})
+  const getMembers = (members) => api.get('api/user', {limit:10, skip:0})
 
   // ------
   // STEP 3
@@ -62,7 +64,9 @@ const create = (baseURL = 'https://www.voetr.com/api/bill') => {
   //
   return {
     // a list of the API functions from step 2
-    getCity
+    getBills,
+    getCommittees,
+    getMembers,
   }
 }
 
