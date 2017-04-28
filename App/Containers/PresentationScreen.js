@@ -45,6 +45,10 @@ export default class PresentationScreen extends React.Component {
             Device Info Screen
           </RoundedButton>
 
+          <RoundedButton onPress={NavigationActions.listviewGridExample}>
+            Table View
+          </RoundedButton>
+
           <View style={styles.centered}>
             <Text style={styles.subtitle}>NOVO {new Date().getFullYear()}</Text>
           </View>
