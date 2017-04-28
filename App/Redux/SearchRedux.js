@@ -25,7 +25,6 @@ const { Types, Creators } = createActions({
   cancelSearch: null
 })
 
-export const TemperatureTypes = Types
 export default Creators
 
 /* ------------- Initial State ------------- */
